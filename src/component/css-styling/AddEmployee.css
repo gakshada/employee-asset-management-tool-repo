@@ -1,0 +1,71 @@
+#add-emp-main-container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    background:  #e1e3eb;
+}
+
+#add-emp-submain-container{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    padding: 20px;
+    background-color: #fff;
+    font-family: sans-serif;
+    width:50%;
+    align-items: center;
+}
+
+#add-emp-submain-container h1{
+    font-size: 1.3rem;
+    padding: 2px auto;
+    margin: 2px auto;
+    text-align: center;
+    color: #285430;
+}
+
+#add-emp-form{
+    margin:10px;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    
+}
+
+#add-btn{
+    margin: 4px 0;
+    padding:2px 5px;
+    background:  #4aa25b;
+    color: #fff;
+    border-color: #285430;
+    border-radius: 5px;
+}
+
+#add-emp-form div{
+    margin:4px auto;
+}
+
+#add-emp-form div label{
+    display: block;
+    margin:4px 0;
+}
+#add-emp-form div input{
+    margin:2px 0;
+    width: 200px;
+}
+
+#go-btn{
+   align-items: center;
+   padding: 1px  3px;
+}
+#go-btn:hover{
+    background: red;
+    border-color:rgb(167, 41, 41);
+}
+#go-btn a{
+    text-decoration: none;
+    text-align: center;
+}
+#go-btn a:hover{
+    color:#fff;
+}
