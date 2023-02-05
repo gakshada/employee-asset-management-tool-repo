@@ -29,10 +29,13 @@ const AdminDashboard =() =>{
                         <Link to="/add-asset">Add Assets</Link>
                     </li>
                     <li>
+                        <Link to="/retrieve-all-asset-details">Get All assets List</Link>
+                    </li>
+                    <li>
                         <Link to="/retrieve-asset-with-id">Get All assets of specific Employee</Link>
                     </li>
                     <li>
-                        <Link to="/">Update Asset Status</Link>
+                        <Link to="/retrieve-all-asset-details">Update Asset Status</Link>
                         
                     </li>
             

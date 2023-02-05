@@ -1,0 +1,60 @@
+#main-asset-container{
+height: 90vh;
+display: flex;
+background:  #e1e3eb;
+flex-direction: column;
+align-items: center;
+}
+
+#sub-asset-container{
+    margin:auto;
+    background: #fff;
+    width:450px;
+    font-family: sans-serif;
+    padding-left:150px;
+}
+
+#sub-asset-container h1{
+    font-size: 1.4rem;
+    color:#285430;
+    margin:3px 10px;
+}
+
+#sub-asset-container form{
+    margin:10px 0;
+    font-size: 0.8rem;
+}
+#sub-asset-container form div{
+    margin:5px 0;
+}
+
+#as-btn{
+    margin: 4px 2px;
+    padding:2px 5px;
+    background:  #4aa25b;
+    color: #fff;
+    border-color: #285430;
+    border-radius: 5px;
+}
+
+#btn-div{
+    display: flex;
+}
+#back-btn{
+    margin:4px 4px;
+    align-items: center;
+    padding: 1px  5px;
+    border-radius: 5px; 
+    background: #fff;  
+}
+ #back-btn:hover{
+     background: red;
+     border-color:rgb(167, 41, 41);
+ }
+ #back-btn a{
+     text-decoration: none;
+     text-align: center;
+ }
+ #back-btn a:hover{
+     color:#fff;
+ }

@@ -1,47 +1,58 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import "./css-styling/GetEmployeewithId.css"
 
-const GetSingleEmployee =() =>{
+const GetSingleEmployee = () => {
+
     const [employee, setEmployee] = useState({});
     const [id, setId] = useState(1);
-    const [idFromButtonClick,setIdFromButtonClick]=useState(1);
+    const [idFromButtonClick, setIdFromButtonClick] = useState(1);
 
-    const handleClick=()=>{
+    const handleClick = () => {
         setIdFromButtonClick(id);
     }
 
-    // useEffect(() =>{
-    //     fetch(`http://localhost:8080/employee-retrieve/${id}`).then(response=>
-    //     {return response.json}).then(d=>{
-    //         console.log(d);
-    //         setEmployee(d);
-    //     }).catch(err =>{
-    //         console.log(err);
-    //     })
-    // },[id])
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
 
-    useEffect(()=>{
+    useEffect(() => {
         axios.get(`http://localhost:8080/employee-retrieve/${id}`)
-        .then(res =>{
-            console.log(res)
-            setEmployee(res.data)
-        })
-        .catch(err =>
-            {
+            .then(res => {
+                console.log(res)
+                setEmployee(res.data)
+            })
+            .catch(err => {
                 console.log(err);
             })
-    },[idFromButtonClick])
+    }, [idFromButtonClick])
 
-    return(
-        <div>
-                <label>Enter userId:</label>
-                <input type="number" value={id} onChange={e=> setId(e.target.value)} />
-                <button type="button" onClick={handleClick}>Fetch Employee</button>
-                <p>Employee Name :{employee.empName}</p>
-                <p>Employee Address :{employee.empAddress}</p>
-                <p>Employee PhoneNumber :{employee.empPhoneNumber}</p>
-                <p>Employee Designation :{employee.empDesignation}</p>
+    return (
+        <div id="employee-container">
+            <div id="sub-emp-container">
+                <div>
+                    <h1 id="text-heading">Employee Details</h1>
+                    <div id="fetch-wrapper">
+                        <label>Enter userId:</label>
+                        <input type="number" value={id} onChange={e => setId(e.target.value)} />
+                        <button id="fetch-btn" type="button" onClick={handleClick}>Fetch Employee</button>
+                    </div>
+
+                </div>
+                <div id="employee-details">
+                    <p><span>Employee Name: </span>{employee.empName}</p>
+                    <p><span>Employee Address: </span>{employee.empAddress}</p>
+                    <p><span>Employee PhoneNumber: </span>{employee.empPhoneNumber}</p>
+                    <p><span>Employee Designation: </span>{employee.empDesignation}</p>
+                    <button id="back-btn1" onClick={goBack}>
+                        Back
+                    </button>
+                </div>
+            </div>
+
         </div>
     );
 }

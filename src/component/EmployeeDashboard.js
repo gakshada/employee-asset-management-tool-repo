@@ -1,9 +1,11 @@
 import React from 'react'; 
-import { Link } from 'react-router-dom';
+import { Link, useParams} from 'react-router-dom';
 import EmployeeImg from '../images/Employee.jpg'
 import "./css-styling/EmployeeDashboard.css"
 
 const EmployeeDashboard =() =>{
+    const param = useParams();
+    const {id}=param;
     return (
         <div className='main-container'>
             <div className='heading-image-container'>
@@ -13,10 +15,10 @@ const EmployeeDashboard =() =>{
             <div className='ul-list-container'>
                     <ul>
                         <li>
-                            <Link to="/retrieve-employee-with-id">Get Employee with id</Link>
+                            <Link to={"/update-phone-and-address/"+id}>Update address and phonenumber</Link>
                         </li>
                         <li>
-                            <Link to="/">Update address and phonenumber</Link>
+                            <Link to="/retrieve-employee-with-id">Get Employee with id</Link>
                         </li>
                     </ul>
             </div>

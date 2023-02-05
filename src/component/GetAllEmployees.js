@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import "./css-styling/retrieve.css"
 
 const GetAllEmployees = () => {
     const [employees, setEmployees] = useState([]);
@@ -32,7 +33,8 @@ const GetAllEmployees = () => {
         // alert(id);
     }
     return (
-        <div>
+        <div className="main-retrieve-container">
+            <div className='sub-retrieve-container'>
             <h1>List of all Employees</h1>
             <table border="1">
                 <thead>
@@ -55,21 +57,23 @@ const GetAllEmployees = () => {
                                 <td>{employee.empAddress}</td>
                                 <td>{employee.empPhoneNumber}</td>
                                 <td>{employee.empDesignation}</td>
-                                <td><button onClick={() => deleteUser(employee.userId)}>Delete</button></td>
+                                <td><button className="delete-btn1" onClick={() => deleteUser(employee.userId)}>Delete</button></td>
                                 <td>
-                                    <Link to={"/update/"+employee.userId}>
-                                    <button>Update</button>
+                                    <Link className="btn-link" to={"/update-name/"+employee.userId}>
+                                    <button className='update-btn1'>Update</button>
                                     </Link>
-                                    </td>   
+                                </td>   
                             </tr>
                         )
                         )
                     }
                 </tbody>
             </table>
-            <button>
-                <Link to="/admin-dashboard">Go Back</Link>
+            <button className='delete-btn1'>
+                <Link className="btn-link" to="/admin-dashboard">Back</Link>
             </button>
+            </div>
+           
         </div>
     );
 }

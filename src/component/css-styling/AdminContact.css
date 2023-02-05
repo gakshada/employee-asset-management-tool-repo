@@ -1,0 +1,47 @@
+#admin-container{
+    height: 90vh;
+    display: flex;
+    background:  #e1e3eb;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sub-ad-container{
+    margin:auto;
+    /* height:250px; */
+    background:#fff;
+    padding: 20px;
+    font-family: sans-serif;
+    box-shadow: rgb(128, 102, 102);
+}
+#text-message{
+   font-weight: 500;
+   margin:10px 0;
+   color: #285430;
+   font-size: 1.3rem;
+   text-align: center;
+}
+
+#text-message p{
+    margin:4px 0;    
+}
+
+#admin-details{
+     margin:3px;
+     padding:10px;
+    margin-left:30%;
+}
+
+
+#admin-details li{
+    list-style: none;    
+}
+#admin-details li p{
+    margin:3px 0;
+    color:green;
+}
+
+#admin-details li span{
+    margin-right:4px;
+    color:red
+}

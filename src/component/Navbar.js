@@ -16,6 +16,9 @@ const Navbar = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
+                        <Link to="/admin-support">Contact</Link>
+                    </li>
+                    <li>
                         <Link to ="/login">
                             <button id='btn1'>Login</button>
                         </Link>
@@ -23,7 +26,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link to ="/">
-                                <button id='btn2'>Contact</button>
+                                <button id='btn2'>Log Out</button>
                         </Link>
                         
                     </li>

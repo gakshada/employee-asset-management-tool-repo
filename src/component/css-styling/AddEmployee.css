@@ -53,10 +53,16 @@
     margin:2px 0;
     width: 200px;
 }
+#btn-div{
+    display:flex;
+}
 
 #go-btn{
-   align-items: center;
-   padding: 1px  3px;
+    margin:4px 4px;
+    align-items: center;
+    padding: 1px  5px;
+    border-radius: 5px; 
+    background: #fff;  
 }
 #go-btn:hover{
     background: red;

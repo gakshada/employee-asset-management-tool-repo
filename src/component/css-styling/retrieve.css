@@ -1,0 +1,43 @@
+.main-retrieve-container{
+height: 90vh;
+display: flex;
+background:  #e1e3eb;
+flex-direction: column;
+align-items: center;
+}
+.sub-retrieve-container{
+    margin:auto;
+    /* width:400px; */
+    /* height:250px; */
+    background:#fff;
+    padding: 20px;
+    font-family: sans-serif;
+    box-shadow: rgb(128, 102, 102);
+}
+.sub-retrieve-container h1{
+    text-align: center;
+    margin:5px;
+    color:#285430;
+}
+.delete-btn1{
+    color:#fff;
+    background: red;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: rgb(128, 47, 47);
+    margin: 5px 10px;
+}
+
+.btn-link{
+    text-decoration: none;
+    color:#fff
+}
+
+.update-btn1{
+    color:#fff;
+    background: rgb(43, 186, 43);
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: green;
+    margin: 5px 10px;
+}

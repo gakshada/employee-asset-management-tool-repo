@@ -11,7 +11,7 @@ const AddEmployee = () => {
     const [userName, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [role, setUserrole] = useState("employee");
-    
+
 
     const submitForm = (event) => {
         event.preventDefault();
@@ -33,7 +33,7 @@ const AddEmployee = () => {
                 setPhoneNumber('');
                 setDesignation('');
                 setUsername('');
-                setPassword('')
+                setPassword('');
                 alert("Employee added Successfully!");
             }
             console.log(response.data);
@@ -75,14 +75,14 @@ const AddEmployee = () => {
                         <label>Role:</label>
                         <input type="text" placeholder="role is employee" value="employee" onChange={e => setUserrole(e.target.value)}></input>
                     </div>
-                    <div>
-                        <button  id='add-btn' onClick={submitForm}>Add Employee</button>
+                    <div id="btn-div">
+                        <button id='add-btn' onClick={submitForm}>Add Employee</button>
+                        <button id='go-btn'>
+                            <Link to="/admin-dashboard">Back</Link>
+                        </button>
                     </div>
 
                 </form>
-                <button  id='go-btn'>
-                    <Link to="/admin-dashboard">Go Back</Link>
-                </button>
             </div>
         </div>
     )
