@@ -48,8 +48,18 @@ const AddAsset = () => {
                         <input type="text" value={serialNumber} onChange={e => setSerialNumber(e.target.value)}></input>
                     </div>
                     <div>
-                        <label>Item status:</label>
-                        <input type="text" value={itemStatus} onChange={e => setItemstatus(e.target.value)}></input>
+                        <label>Item status: </label>
+                        <select value={itemStatus} onChange={e => setItemstatus(e.target.value)} >
+                            <option value="Allocated">Allocated</option>
+
+                            <option value="Returned">Returned</option>
+
+                            <option value="Damaged">Damaged</option>
+                        </select>
+
+
+                        {/* 
+                        <input type="text" value={itemStatus} }></input> */}
                     </div>
                     <div>
                         <label>Employee Id:</label>
@@ -61,11 +71,11 @@ const AddAsset = () => {
                             <Link to="/admin-dashboard">Back</Link>
                         </button>
                     </div>
-                </form>
+                </form >
 
-            </div>
+            </div >
 
-        </div>
+        </div >
     )
 }
 export default AddAsset;

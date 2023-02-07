@@ -51,9 +51,10 @@
 }
 .admin-activity-list li{
     list-style: none;
-    padding: 2px 0;
+    padding: 2px 70px;
     font-size: 0.9rem;
     font-weight: 500;
+    text-align: left;
 }
 
 .admin-activity-list li a{
@@ -63,4 +64,5 @@
 
 .admin-activity-list li a:hover{
     color:red;
+    text-decoration: underline;
 }

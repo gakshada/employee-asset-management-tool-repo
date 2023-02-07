@@ -1,5 +1,5 @@
 import React from "react";
-import homePic from "../images/homepage.jpg"
+import homePic from "../images/AssetHome.png"
 import "./css-styling/Home.css"
 const Home = ()=>{
     return(

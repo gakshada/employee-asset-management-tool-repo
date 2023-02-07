@@ -60,8 +60,16 @@ const UpdateAssetStatus = () => {
                             <input type="text" value={empId}></input>
                         </div>
                         <div>
-                            <label>Item Status:</label>
-                            <input type="text" onChange={(e) => setItemstatus(e.target.value)} value={itemStatus}></input>
+                            <label>Item Status: </label>
+                            <select value={itemStatus} onChange={e => setItemstatus(e.target.value)} >
+                            <option value="Allocated">Allocated</option>
+
+                            <option value="Returned">Returned</option>
+
+                            <option value="Damaged">Damaged</option>
+                        </select>
+
+                            {/* <input type="text" onChange={(e) => setItemstatus(e.target.value)} value={itemStatus}></input> */}
                         </div>
                         <div id="btn-div1">
                             <button id="as-btn1"onClick={() => editAsset(serialNumber)}>Update Status</button>
